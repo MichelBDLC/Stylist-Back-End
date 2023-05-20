@@ -1,0 +1,11 @@
+\c styles_dev;
+
+INSERT INTO styles (name, category, url, image, price, is_favorite) VALUES
+('ART CARGO PANTS', 'Bottoms', https://us.manieredevoir.com/collections/womens-best-sellers/products/mid-rise-art-cargo-pants-with-tassels-multi, https://cdn.shopify.com/s/files/1/1604/7647/products/WMN3246-10.jpg?v=1680174710, 160, true),
+('Cookie Monster', 'Accesories', https://soniquesaturday.com/collections/handbags/products/30-cm-cookie-monster-yfltb?variant=41735990968499, https://cdn.shopify.com/s/files/1/0594/2922/4627/products/CookieMonster30_1080x.png?v=1666934110, 530, false),
+('Alyssa', 'Dresses', https://www.houseofcb.com/alyssa-scarlet-satin-mini-dress-us.html, https://d166chel5lrjm5.cloudfront.net/images/detailed/83/1643270685-sb8031-01.jpg, 239, false),
+('Illusion Shaping Bosyduit', 'Tops', https://fashion.mugler.com/collections/tops/products/illusion-shaping-bodysuit-3, https://cdn.shopify.com/s/files/1/0351/2850/8547/products/22W1BO0156850_B60N1_01.jpg?v=1669890098, 520, false),
+('Fetish Blazer', 'OuterWear', https://zcrave.com/collections/best-sellers/products/f3tish-blazer-pants-matching-set-in-black, https://zcrave.com/cdn/shop/products/ZCRAVE_BellaThorne_F3TISHSET_8_53f35c9b-9b63-4ab4-aa7c-143e8b0fee67_1024x1024.jpg?v=1631633921, 299, false),
+('Vol De Nuit Silk Shirt', 'Tops', https://casablancaparis.com/collections/womens-silk-shirts/products/wf22-sh-058-06-vol-de-nuit-silk-shirt, https://cdn.shopify.com/s/files/1/0076/1341/5506/products/MF22-04_0300_1920x.jpg?v=1676652763, 780, false),
+('CONTRAST ASYMMETRIC BODYSUIT', 'Tops', https://us.manieredevoir.com/collections/womens-bodysuits/products/contrast-asymmetric-bodysuit-white-green, https://cdn.shopify.com/s/files/1/1604/7647/products/WMN3167-02.jpg?v=1668544449, 80, true),
+('Floral Print Pants', 'Bottoms', https://www.zara.com/us/en/floral-print-ankle-length-pants-p03454251.html?v1=258904878&v2=2187644, https://static.zara.net/photos///2023/V/0/1/p/3454/251/330/2/w/2880/3454251330_6_1_1.jpg?ts=1681214025861, 49.90, true);

@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "postgres": "^3.3.4",
+    "pg-promise": "^11.4.3"
+  },
+  "name": "stylist-back-end",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dbinit": "psql -U postgres -f db/schema.sql",
+    "dbseed": "psql -U postgres -f db/seed.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelBDLC/Stylist-Back-End.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichelBDLC/Stylist-Back-End/issues"
+  },
+  "homepage": "https://github.com/MichelBDLC/Stylist-Back-End#readme"
+}
