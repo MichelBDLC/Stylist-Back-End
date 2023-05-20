@@ -10,7 +10,7 @@ CREATE TABLE styles (
     category TEXT,
     url TEXT,
     image TEXT, -- might need to add url after image ??
-    price FLOAT,
+    price FLOAT NOT NULL,
     is_favorite BOOLEAN
 );
 
