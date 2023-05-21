@@ -6,14 +6,21 @@ const {
 } = require("../queries/styles");
 
 styles.get('/', async (request, response) => {
-    const allStyles = await getAllStyles(request.query);
 
-    if (allStyles[0]) {
-        response.status(200).json(allStyles);
+    try {
+
+        const allStyles = await getAllStyles(request.query);
+
+        if (allStyles.length > 0) {
+
+            response.status(200).json(allStyles);
+        } 
+        else {
+            response.status(404).json({ error: "No styles found" });
+        }
+    } catch (error) {
+        response.status(500).json({ error: "Failed to fetch styles" });
     }
-    else {
-        response.status(500).json({ error: "server error" });
-    };
 });
 
 styles.get('/:id', async (request, response) => {
@@ -30,31 +37,43 @@ styles.get('/:id', async (request, response) => {
 });
 
 styles.post('/', async (request, response) => {
+
     if (request.body) {
-        const newStyle = await createStyle(request.body);
-        response.status(200).json(newStyle);
+
+        try {
+
+            const newStyle = await createStyle(request.body);
+            response.status(201).json(newStyle);
+        } catch (error) {
+
+            response.status(500).json({ error: "Failed to create style" });
+        }
+    } else {
+
+        response.status(400).json({ error: "Invalid request body" });
     }
-    else {
-        response.status(404).json({ error: "cannot create style" });
-    };
 });
 
 styles.delete('/:id', async (request, response) => {
-    const { id } = request.params;
-    const deletedStyle = await deleteStyle(id);
 
-    if (deletedStyle.id) {
-        response.status(200).json(deletedStyle);
+    const { id } = request.params;
+
+    try {
+
+        const deletedStyle = await deleteStyle(id);
+        response.sendStatus(204);
+    } catch (error) {
+        
+        response.status(500).json({ error: "Failed to delete style" });
     }
-    else {
-        response.status(404).json({ error: "cannot delete style" });
-    };
 });
 
 styles.put('/:id', async (request, response) => {
+
     const { id } = request.params;
 
     if (request.body) {
+        
         const updatedStyle = await updateStyle(id, request.body);
         response.status(200).json(updatedStyle);
     }

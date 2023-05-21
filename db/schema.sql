@@ -8,10 +8,11 @@ CREATE TABLE styles (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     category TEXT,
+    style TEXT,
+    price FLOAT,
+    is_favorite BOOLEAN,
     url TEXT,
-    image TEXT, -- might need to add url after image ??
-    price FLOAT NOT NULL,
-    is_favorite BOOLEAN
+    img TEXT
 );
 
 
